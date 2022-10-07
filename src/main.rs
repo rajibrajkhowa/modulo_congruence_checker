@@ -2,17 +2,12 @@ use std::io;
 
 #[derive(Debug)]
 struct Input {
-    a: u64,
-    b: u64,
-    c: u64
+    a: i64,
+    b: i64,
+    c: i64
 }
 
-trait Congruent {
-
-    fn is_congruent(&self) -> bool;
-}
-
-impl Congruent for Input  {
+impl Input  {
 
         fn is_congruent(&self) -> bool {
 
@@ -32,17 +27,17 @@ fn main() {
     let mut x = String::new();
     println!("Please enter the first number:");
     io::stdin().read_line(&mut x).expect("Number not entered");
-    let x: u64 = x.trim().parse().expect("Please type a number");
+    let x: i64 = x.trim().parse().expect("Please type a number");
 
     let mut y = String::new();
     println!("Please enter the second number:");
     io::stdin().read_line(&mut y).expect("Number not entered");
-    let y: u64 = y.trim().parse().expect("Please type a number");
+    let y: i64 = y.trim().parse().expect("Please type a number");
 
     let mut z = String::new();
     println!("Please enter the modulo number:");
     io::stdin().read_line(&mut z).expect("Number not entered");
-    let z: u64 = z.trim().parse().expect("Please type a number");
+    let z: i64 = z.trim().parse().expect("Please type a number");
 
 
    let input: Input = Input {
